@@ -1,14 +1,689 @@
-$white: #fff
+/** Fonts **/
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed:300,300i,400,500')
 
-html, body
+/** Size Defs **/
+$textFont: 'Fira Sans Extra Condensed', sans-serif
+$headingFont: 'Fira Sans Extra Condensed', sans-serif
+
+/** Color Defs **/
+$white: #fff
+$lightWhite: #fafafc
+$lightGray: #e6e6e6
+$silver: #ccc
+$darkGray: #4d4d4d
+$black: #1a1a1a
+
+$red: #fc4359
+$green: #00aa88
+$blue: #5555ff
+$darkBlue: #32325d
+
+$redD1: #d6394c
+$greenD1: #009175
+$blueD1: #4848d9
+
+/* General */
+*
   margin: 0
   padding: 0
-  background: $white
+  -webkit-font-smoothing: antialiased
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+a
+  text-decoration: none
+
+a:hover
+  text-decoration: none
+  color: $blue
+
+p a, .page li a
+  color: $black
+  border-bottom: 1px dashed $darkGray
+
+p a:hover, .page li a:hover
+  border-bottom: 1px solid $blue
 
 img
-  position: absolute
-  margin: auto
-  top: 0
-  left: 0
-  right: 0
+  text-decoration: none
+  border: none
+
+html, body
+  height: 100%
+  font-family: $textFont
+  font-size: 16px
+  font-weight: 300
+  color: $black
+  margin: 0
+  padding: 0
+
+body
+  position: relative
+
+h1, h2, h3, h4, h5
+  font-family: $headingFont
+
+h1
+  font-weight: 500
+  font-size: 32px
+
+h2
+  font-weight: 500
+  font-size: 26px
+
+h3
+  color: $green
+  font-weight: 400
+
+h4
+  color: $blue
+  font-size: 20px
+  font-weight: 400
+
+h5
+  font-size: 20px
+  font-weight: 400
+
+p, li
+  font-size: 18px
+
+.page ul
+  margin-left: 26px
+
+blockquote
+  border: 1px solid $lightGray
+  border-radius: 4px
+  margin: 30px 60px 20px
+  p
+    font-size: 20px
+    font-weight: 400
+    color: $red
+
+blockquote + p
+  margin: -10px 60px 20px 0
+  text-align: right
+  color: $darkGray
+
+ul li blockquote
+  margin-top: 10px
+
+input, input.form-control, textarea, textarea.form-control
+  font-size: 16px
+
+input, input.form-control
+  height: 40px
+
+.full-height
+  height: 100%
+
+.half-cover
+  width: 100%
+  height: 40vh
+  color: $white
+
+.upper
+  text-transform: uppercase
+
+.fw-normal
+  font-weight: 400
+
+p.big
+  font-size: 22px
+
+button:focus
+  outline: 0
+
+span.rv
+  unicode-bidi: bidi-override
+  direction: rtl
+
+.more
+  font-size: 18px
+  font-weight: 400
+
+.justify-img
+  text-align: justify
+  img
+    display: inline-block
+
+.justify-img:after
+  content: ''
+  display: inline-block
+  width: 100%
+  height: 0
+
+.page
+  h1
+    margin-bottom: 30px
+  h4
+    margin-top: 30px
+
+.help-block
+  li
+    font-size: 14px
+    padding-left: 5px
+
+.page ul.list-unstyled
+  margin-left: 0
+
+/** Colors **/
+.red
+  color: $red
+
+a.red:hover
+  color: $redD1
+
+.green
+  color: $green
+
+.black
+  color: $black
+
+/** Margin **/
+.mt10
+  margin-top: 10px
+
+.mt20
+  margin-top: 20px
+
+.mt40
+  margin-top: 40px
+
+.mt60
+  margin-top: 60px
+
+.mb0
+  margin-bottom: 0
+
+.mb10
+  margin-bottom: 10px
+
+.mb15
+  margin-bottom: 15px
+
+.mb20
+  margin-bottom: 20px
+
+/** Padding **/
+.pt10
+  padding-top: 10px
+
+.pt15
+  padding-top: 15px
+
+.pt20
+  padding-top: 20px
+
+.pt25
+  padding-top: 25px
+
+.pb10
+  padding-bottom: 10px
+
+.pb15
+  padding-bottom: 15px
+
+.pb20
+  padding-bottom: 20px
+
+.hp30
+  padding-left: 30px
+  padding-right: 30px
+
+@media(min-width: 576px)
+  .sm-hp30
+    padding-left: 30px
+    padding-right: 30px
+
+.hp60-20-60
+  padding-left: 60px
+  padding-right: 60px
+
+@media (min-width: 768px)
+  .hp60-20-60
+    padding-left: 20px
+    padding-right: 20px
+
+@media (min-width: 992px)
+  .hp60-20-60
+    padding-left: 60px
+    padding-right: 60px
+
+@media (min-width: 768px)
+  .sm-pr5
+    padding-right: 5px
+
+@media (min-width: 768px)
+  .sm-pl5
+    padding-left: 5px
+
+/** Buttons **/
+.btn
+  text-transform: uppercase
+
+.big.btn
+  font-size: 18px
+
+.btn-transp-blue
+  background: transparent
+  color: $black
+
+.btn-transp-blue:hover
+  background: $blue
+  color: $white
+
+.btn-blue
+  border: 2px solid $blue
+  background: $blue
+  color: $white
+
+.btn-blue:hover
+  border: 2px solid $blueD1
+  background: $blueD1
+  color: $white
+
+.btn-green
+  border: 2px solid $green
+  background: $green
+  color: $white
+
+.btn-green:hover
+  border: 2px solid $greenD1
+  background: $greenD1
+  color: $white
+
+.btn-basic-gray
+  border: 2px solid $darkGray
+  background: $white
+  color: $darkGray
+
+.btn-basic-gray:hover
+  background: $darkGray
+  color: $white
+
+.btn-basic-blue
+  border: 2px solid $blue
+  background: $white
+  color: $blue
+
+.btn-basic-blue:hover
+  background: $blue
+  color: $white
+
+/** Flexbox **/
+.hbox
+  display: flex
+
+.vbox
+  display: flex
+  flex-direction: column
+
+.flex-fill
+  flex: 1
+
+.flex-center
+  align-items: center
+
+.flex-center-center
+  align-items: center
+  justify-content: center
+
+.flex-start
+  align-self: flex-start
+
+.flex-end
+  align-self: flex-end
+
+/** Nav Bar **/
+.navbar-default
+  background: $white
+  border: none
+  box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.15)
+
+.navbar-brand
+  padding-top: 12px
+
+.navbar-default .navbar-nav > li > a
+  font-size: 17px
+  color: $darkGray
+
+.navbar-default .navbar-nav > li > a:hover
+  color: $blue
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .active > a:hover
+  color: $green
+  background: transparent
+
+.navbar .btn
+  font-size: 15px
+  margin-top: 7px
+
+/** Cover **/
+.cover
+  height: 100vh
+  width: 100%
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)), url('../img/colobus_cover_03.jpg') center center
+  background-size: auto, cover
+  .claim
+    color: $white
+    font-size: 40px
+    font-weight: 400
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3)
+
+.bg-gr-btm-black
+  background: url('../img/bg_gradient_black.png') repeat-x bottom
+
+.arrow
+  display: none
+  position: fixed
   bottom: 0
+  left: 50%
+  margin-left: -27px
+  margin-bottom: 36px
+  width: 54px
+  height: 30px
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDcyIDQwIiB2ZXJzaW9uPSIxLjEiPjxwYXRoIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiNmZmZmZmY7c3Ryb2tlLXdpZHRoOjY7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kOyIgZD0iTSA2Ny4yNzY3Nyw0LjM4MDMxMTEgMzYsMzUuNjU3MDcxIDQuNzIzMjMsNC4zODAzMTExIi8+PC9zdmc+DQo=)
+  background-size: contain
+
+.bounce
+  -webkit-animation: bounce 2.5s infinite
+  animation: bounce 2.5s infinite
+
+@keyframes bounce
+  0%, 20%, 50%, 80%, 100%
+    -webkit-transform: translateY(0)
+    -moz-transform: translateY(0)
+    -ms-transform: translateY(0)
+    -o-transform: translateY(0)
+    transform: translateY(0)
+  40%
+    -webkit-transform: translateY(-8px)
+    -moz-transform: translateY(-8px)
+    -ms-transform: translateY(-8px)
+    -o-transform: translateY(-8px)
+    transform: translateY(-8px)
+  60%
+    -webkit-transform: translateY(-4px)
+    -moz-transform: translateY(-4px)
+    -ms-transform: translateY(-4px)
+    -o-transform: translateY(-4px)
+    transform: translateY(-4px)
+
+.signup
+  background: $darkBlue
+  color: $lightWhite
+  box-shadow: inset 0 1px 1px 1px rgba(0, 0, 0, 0.2), inset 0 -1px 1px 1px rgba(0, 0, 0, 0.2)
+  .col-md-2
+    padding-left: 5px
+    padding-right: 5px
+  .help-block
+    color: $lightWhite
+
+#alertRow
+  display: none
+
+.amount-picker
+  display: inline-block
+  padding: 0 12px
+
+.amount-label
+  display: inline-block
+  position: relative
+  top: 3px
+  font-size: 20px
+  font-weight: 400
+
+.btn-amount
+  height: 36px
+  background: transparent
+  border: none
+
+.btn-amount:hover
+  opacity: 0.9
+
+.amount
+  display: inline-block
+  position: relative
+  top: 6px
+  padding: 0 6px
+  font-size: 30px
+  font-weight: 400
+  color: $white
+
+@media(max-width: 575px)
+  .amount-label
+    display: block
+  .amount-picker
+    display: block
+  .btn-calculate
+    display: block
+    width: 100%
+
+.info
+  background: $lightWhite
+
+.why
+  background: $green
+  color: $white
+
+.payment
+  background: $blue
+  padding-top: 32px
+  padding-bottom: 10px
+
+.img-payment
+  height: 12px
+
+@media(min-width: 512px)
+  .img-payment
+    height: 16px
+
+@media(min-width: 768px)
+  .img-payment
+    height: 24px
+
+.pricing
+  background: $darkBlue
+  background-size: auto, cover
+  h1
+    color: $white
+  .panel-outer
+    padding: 0 15px
+  .panel
+    padding: 0 10px 10px 10px
+    .features
+      padding: 10px 20px 0 25px
+  .panel-featured
+    h2
+      margin-top: 0
+  .price
+    color: $green
+    font-size: 36px
+    font-weight: 500
+  .period
+    font-size: 24px
+    font-weight: 400
+  ul li
+    font-size: 18px
+  .recommended
+    font-weight: 400
+    color: $red
+    margin-top: 20px
+  .more
+    color: $lightGray
+  .more:hover
+    color: $white
+
+.ribbon
+  position: absolute
+  height: 32px
+  top: 24px
+  right: 0
+  font-size: 14px
+  padding: 5px 8px
+  color: $white
+  border-radius: 4px 0 0 4px
+  background: $red
+
+.ribbon:after
+  position: absolute
+  z-index: 0
+  content: ''
+  top: 0
+  right: 0
+  width: 0
+  height: 0
+  margin-top: 32px
+  border-style: solid
+  border-width: 15px 15px 0 0
+  border-color: transparent
+  background-color: transparent !important
+  border-top-color: $redD1
+
+@media (max-width: 499px)
+  .pricing
+    .price
+      display: block
+    ul li
+      font-size: 16px
+
+@media (max-width: 767px)
+  .pricing .panel-featured .ribbon
+    top: 60px
+
+@media (min-width: 576px)
+  .pricing
+    .panel
+      margin-top: 36px
+      .features
+        padding-left: 40px
+
+@media (min-width: 768px)
+  .pricing
+    .panel-featured
+      margin-top: 0
+  .ribbon
+    top: 146px
+
+@media (min-width: 992px)
+  .pricing
+    .panel-outer
+      padding: 0 20px
+    .panel
+      padding: 0 15px 10px 15px
+      .features
+        padding-left: 50px
+  .ribbon
+    height: 40px
+    right: 5px
+    font-size: 16px
+    padding: 8px 12px
+  .ribbon:after
+    top: 8px
+
+@media (min-width: 1200px)
+  .pricing
+    .panel-outer
+      padding: 0 30px
+    .panel
+      padding: 0 20px 10px 20px
+  .ribbon
+    right: 15px
+
+.contact
+  background: $lightWhite
+  border-bottom: 1px solid $lightGray
+  h2
+    font-size: 26px
+    font-weight: 400
+    margin-bottom: 0
+
+.faq
+  min-height: 50vh
+
+.faq-entry
+  min-height: 50vh
+  h4
+    margin-top: 20px
+  ul
+    padding-left: 30px
+    li
+      font-size: 18px
+
+.reading-list
+  h4
+    font-size: 20px
+    margin-top: 20px
+    margin-bottom: 5px
+
+#contact
+  .form-group
+    margin-left: 0
+    margin-right: 0
+
+footer
+  background: $lightWhite
+  .lang
+    padding-left: 5px
+    color: $green
+    font-weight: 400
+  .copyright
+    float: right
+    padding-top: 6px
+    padding-left: 8px
+    font-size: 14px
+    font-weight: 300
+    color: $silver
+  h4
+    margin-top: 18px
+    margin-bottom: 2px
+    font-size: 16px
+    text-transform: uppercase
+    color: $darkGray
+  a
+    font-size: 16px
+    display: block
+    color: $darkGray
+
+.dropup
+  margin-top: 4px
+
+#lang-dd
+  cursor: pointer
+
+#lang-dd:hover
+  opacity: 0.85
+
+.dropdown-menu > li > a
+  font-size: 16px
+  font-weight: 300
+
+.dropdown-menu > li > a.active
+  font-weight: 400
+  padding: 4px 0 10px 40px
+  background: url('../img/icon_checkmark.png') no-repeat 12px 3px
+  background-size: 24px 24px
+  color: $green
+
+@media (min-width: 768px)
+  footer
+    .copyright
+      display: block
+      float: none
+      margin-top: 78px
+    h4
+      font-size: 15px
+      margin-top: 6px
+      margin-bottom: 12px
+    a
+      font-size: 15px
+
+@media (min-width: 992px)
+  footer
+    h4
+      font-size: 17px
+    a
+      font-size: 17px
