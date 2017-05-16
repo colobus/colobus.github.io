@@ -327,7 +327,7 @@ a.red:hover {
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:focus,
 .navbar-default .navbar-nav > .active > a:hover {
-  color: #00aa88;
+  color: #5555ff;
   background: transparent; }
 
 .navbar .btn {
