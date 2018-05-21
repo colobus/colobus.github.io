@@ -133,14 +133,14 @@ O’Shaughnessy eine Vielzahl quantitativer Strategien und validiert diese gegen
                 
                 <div class="panel panel-default">
                     <div class="panel-body text-center">
-                        <a href="https://www.amazon.de/gp/product/1118821157/ref=as_li_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=1118821157&linkCode=as2&tag=c0958-21" target="_blank"><img src="/assets/img/book_teowb.jpg" height="240"></a>
-                        <h4>The Essays of Warren Buffett</h4>
-                        <span class="author">Lawrence Cunningham</span>
+                        <a href="https://www.amazon.de/gp/product/0393352242/ref=as_li_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=0393352242&linkCode=as2&tag=c0958-21" target="_blank"><img src="/assets/img/book_arwdws.jpg" height="240"></a>
+                        <h4>A Random Walk Down Wall Street</h4>
+                        <span class="author">Burton G. Malkiel</span>
                     </div>
                     <ul class="list-group">
-                        <li class="list-group-item"><p>Warren Buffett gilt als der erfolgreichsten Investor der Welt. Die Aufsätze in diesem Buch sind eine Sammlung der
-Briefe, die Buffett an die Anleger seines Fonds Berkshire Hathaway schrieb und erklären die Prinzipien des Value
-Investings in beeindruckender Breite und Tiefe.</p>
+                        <li class="list-group-item"><p>Ein absoluter Klassiker der Investmentliteratur, der weit über reines Value Investing hinausgeht. Professor Malkiel
+arbeitet sich in klar verständlicher Sprache durch alle relevanten Bereiche der langfristigen Vermögensanlage. In
+diesem Buch steht übrigens auch das berühmte Zitat über Affen und Anlage-Experten.</p>
 </li>
                     </ul>
                 </div>
@@ -154,14 +154,14 @@ Investings in beeindruckender Breite und Tiefe.</p>
             
                 <div class="panel panel-default">
                     <div class="panel-body text-center">
-                        <a href="https://www.amazon.de/gp/product/0393352242/ref=as_li_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=0393352242&linkCode=as2&tag=c0958-21" target="_blank"><img src="/assets/img/book_arwdws.jpg" height="240"></a>
-                        <h4>A Random Walk Down Wall Street</h4>
-                        <span class="author">Burton G. Malkiel</span>
+                        <a href="https://www.amazon.de/gp/product/1118821157/ref=as_li_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=1118821157&linkCode=as2&tag=c0958-21" target="_blank"><img src="/assets/img/book_teowb.jpg" height="240"></a>
+                        <h4>The Essays of Warren Buffett</h4>
+                        <span class="author">Lawrence Cunningham</span>
                     </div>
                     <ul class="list-group">
-                        <li class="list-group-item"><p>Ein absoluter Klassiker der Investmentliteratur, der weit über reines Value Investing hinausgeht. Professor Malkiel
-arbeitet sich in klar verständlicher Sprache durch alle relevanten Bereiche der langfristigen Vermögensanlage. In
-diesem Buch steht übrigens auch das berühmte Zitat über Affen und Anlage-Experten.</p>
+                        <li class="list-group-item"><p>Warren Buffett gilt als der erfolgreichsten Investor der Welt. Die Aufsätze in diesem Buch sind eine Sammlung der
+Briefe, die Buffett an die Anleger seines Fonds Berkshire Hathaway schrieb und erklären die Prinzipien des Value
+Investings in beeindruckender Breite und Tiefe.</p>
 </li>
                     </ul>
                 </div>
@@ -300,7 +300,17 @@ Eurostoxx-Region validiert und verglichen.</p>
 <script src="https://js.stripe.com/v3/"></script>
 
 <script>
+    var das = 'ga-disable-UA-97002243-3';
+    if (document.cookie.indexOf(das + '=true') > -1) window[das] = true;
+    function gaOptout() {
+        document.cookie = das + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+        window[das] = true;
+    }
+    dataLayer = [];
+</script>
+<script>
     (function (i, s, o, g, r, a, m) {
+        if (location.hostname === "localhost") return;
         i['GoogleAnalyticsObject'] = r;
         i[r] = i[r] || function () {
                     (i[r].q = i[r].q || []).push(arguments)
@@ -312,6 +322,7 @@ Eurostoxx-Region validiert und verglichen.</p>
         m.parentNode.insertBefore(a, m)
     })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
     ga('create', 'UA-97002243-3', 'auto');
+    ga('set', 'anonymizeIp', true);
     ga('send', 'pageview');
 </script>
 
